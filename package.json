@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build ./src/index.html -d ./docs --no-source-maps",
+    "build": "parcel build ./src/index.html -d ./docs --no-source-maps --public-url ./pauls_leds/",
     "dev": "parcel ./src/index.html -d ./dist --no-source-maps"
   },
   "browserslist": [
