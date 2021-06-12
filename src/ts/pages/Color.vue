@@ -31,7 +31,7 @@ export default {
             let blue = hexColor.substring(5,7);
             if (ip) {
                 axios
-                    .get(`http://${ip}/led/${red}/${green}/${blue}`)
+                    .get(`https://${ip}/led/${red}/${green}/${blue}`)
                     .then((res) => {
                         if (res.data == "OK") {
                             this.$emit('alert', { message: `Changed LEDs to ${hexColor}`, success: true });
