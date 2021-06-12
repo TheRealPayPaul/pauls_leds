@@ -2,7 +2,7 @@
     "name": "Pauls LEDs",
     "short_name": "Pauls LEDs",
     "description": "Change Pauls LEDs to mess with him.",
-    "start_url": "/",
+    "start_url": "/pauls_leds/",
     "display": "standalone",
     "background_color": "#FFF",
     "theme_color": "#FF69B4",
