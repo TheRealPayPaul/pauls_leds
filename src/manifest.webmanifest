@@ -1,0 +1,27 @@
+{
+    "name": "Pauls LEDs",
+    "short_name": "Pauls LEDs",
+    "description": "Change Pauls LEDs to mess with him.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFF",
+    "theme_color": "#FF69B4",
+    "icons": [
+        {
+            "src": "./img/icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icon/mask-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

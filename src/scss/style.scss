@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.g-title {
+    color: hotpink;
+    font-family: Pacifico;
+    margin: 2rem 0;
+}
+
+.g-button {
+    background-color: hotpink;
+    padding: 1rem 4rem;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform .2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.g-button:hover {
+    cursor: pointer;
+    transform: translateY(.1rem);
+}
+
+.g-button:active {
+    background-color: rgb(255, 137, 196);
+    transform: translateY(.5rem);
+}
+
+.g-input-text {
+    border: none;
+    border-bottom: 3px rgb(255, 137, 196) solid;
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    padding-top: .5rem;
+    padding-bottom: .25rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.g-input-text:focus {
+    outline: none;
+    border-bottom: 3px hotpink solid;
+}
