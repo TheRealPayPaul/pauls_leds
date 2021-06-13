@@ -17,7 +17,7 @@ export default {
         curIp: 'Not defined',
         validator: /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/,
         input: {
-            ip: '',
+            ip: 'pauls-leds.tk',
         }
     }),
     methods: {

@@ -1,8 +1,8 @@
 const cacheAllowlist = [
-    'led-v3'
+    'led-v4'
 ]
 
-const CACHE_NAME = 'led-v3';
+const CACHE_NAME = 'led-v4';
 
 const urlsToCache = [
     "android-chrome-192x192.3c5d38c8.png",
