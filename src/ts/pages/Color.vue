@@ -33,10 +33,12 @@ export default {
                 axios
                     .get(`https://pauls-leds.tk/led/${key}/${red}/${green}/${blue}`)
                     .then((res) => {
-                        if (res.data == "OK") {
+                        if (res.data == 'OK') {
                             this.$emit('alert', { message: `Changed LEDs to ${hexColor}`, success: true });
-                        } else if (res.data == "RATE") {
+                        } else if (res.data == 'RATE') {
                             this.$emit('alert', { message: 'Rate limit', success: false });
+                        } else if (res.data == 'INVALID_KEY') {
+                            this.$emit('alert', { message: 'Invalid key', success: false });
                         } else {
                             this.$emit('alert', { message: 'Could not change LEDs', success: false });
                         }
