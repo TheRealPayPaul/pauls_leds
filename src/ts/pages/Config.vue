@@ -2,9 +2,9 @@
     <div class="config-container">
         <h1 class="g-title">Config</h1>
         <div class="config-option-container">
-            <span>Host adress</span>
-            <input v-model="input.ip" v-bind:placeholder="curIp" class="g-input-text" type="text">
-            <button v-on:click="setIp" class="g-button config-button">Update</button>
+            <span>Auth Key</span>
+            <input v-model="input.key" v-bind:placeholder="curKey" class="g-input-text" type="text">
+            <button v-on:click="setKey" class="g-button config-button">Update</button>
         </div>
     </div>
 </template>
@@ -14,23 +14,23 @@
 export default {
     name: 'About',
     data: () => ({
-        curIp: 'Not defined',
-        validator: /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|pauls-leds.tk$/,
+        curKey: 'Not defined',
+        validator: /^[0-9a-zA-Z]{16}$/,
         input: {
-            ip: 'pauls-leds.tk',
+            key: '',
         }
     }),
     methods: {
-        setIp: function() {
-            if (this.input.ip == '') {
+        setKey: function() {
+            if (this.input.key == '') {
                 this.$emit('alert', { message: 'Empty you dummie', success: false });
                 return
             }
 
-            if (this.validator.test(this.input.ip)) {
-                localStorage.setItem('ip', this.input.ip);
-                this.curIp = this.input.ip;
-                this.input.ip = '';
+            if (this.validator.test(this.input.key)) {
+                localStorage.setItem('key', this.input.key);
+                this.curKey = this.input.key;
+                this.input.key = '';
                 this.$emit('alert', { message: 'Updated', success: true });
             } else {
                 this.$emit('alert', { message: 'Wrong format', success: false });
@@ -38,9 +38,9 @@ export default {
         },
     },
     mounted: function() {
-        let ip = localStorage.getItem('ip');
-        if (ip) {
-            this.curIp = ip;
+        let key = localStorage.getItem('key');
+        if (key) {
+            this.curKey = key;
         }
     }
 }

@@ -25,25 +25,27 @@ export default {
     }),
     methods: {
         sendRequest: function(hexColor: string) {
-            let ip = localStorage.getItem('ip');
+            let key = localStorage.getItem('key');
             let red = hexColor.substring(1,3);
             let green = hexColor.substring(3,5);
             let blue = hexColor.substring(5,7);
-            if (ip) {
+            if (key) {
                 axios
-                    .get(`https://${ip}/led/${red}/${green}/${blue}`)
+                    .get(`https://pauls-leds.tk/led/${key}/${red}/${green}/${blue}`)
                     .then((res) => {
                         if (res.data == "OK") {
                             this.$emit('alert', { message: `Changed LEDs to ${hexColor}`, success: true });
+                        } else if (res.data == "RATE") {
+                            this.$emit('alert', { message: 'Rate limit', success: false });
                         } else {
                             this.$emit('alert', { message: 'Could not change LEDs', success: false });
                         }
                     })
                     .catch((er) => {
-                        this.$emit('alert', { message: 'Server down or wrong ip', success: false });
+                        this.$emit('alert', { message: 'Server down', success: false });
                     });
             } else {
-                this.$emit('alert', { message: 'Ip not defined', success: false });
+                this.$emit('alert', { message: 'Key undefined', success: false });
             }
         },
         saveColor: function() {
