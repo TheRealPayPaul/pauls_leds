@@ -15,7 +15,7 @@ export default {
     name: 'About',
     data: () => ({
         curIp: 'Not defined',
-        validator: /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/,
+        validator: /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|pauls-leds.tk$/,
         input: {
             ip: 'pauls-leds.tk',
         }
